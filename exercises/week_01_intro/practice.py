@@ -33,6 +33,8 @@ from decimal import Decimal  # noqa: F401
 # ------------------------------------------------------------------------------
 # TODO: Write Part 1 together in class below:
 
+user_name = input("Enter your username: ")
+print(f"Hello, {user_name}! Welcome to CSE 101!")
 
 # ------------------------------------------------------------------------------
 # Part 2: Integer Input & Type Conversion - int()
@@ -44,6 +46,11 @@ from decimal import Decimal  # noqa: F401
 # 3. Print: print(f"You will turn {age} years old in 2026.")
 # ------------------------------------------------------------------------------
 # TODO: Write Part 2 together in class below:
+
+birth_year = input("Enter your birth year: ")
+year = int(birth_year)
+age = 2026 - year
+print(f"You will turn {age} years old in 2026.")
 
 
 # ------------------------------------------------------------------------------
@@ -57,6 +64,9 @@ from decimal import Decimal  # noqa: F401
 # ------------------------------------------------------------------------------
 # TODO: Write Part 3 together in class below:
 
+celcius = float(input("Enter temperature in Celcius: "))
+fahrenheit = (celcius * 9 / 5) + 35
+print("Fahrenheit:", fahrenheit)
 
 # ------------------------------------------------------------------------------
 # Part 4: Cleaning Input with .strip()
@@ -69,6 +79,8 @@ from decimal import Decimal  # noqa: F401
 # ------------------------------------------------------------------------------
 # TODO: Write Part 4 together in class below:
 
+student_id = input("Enter your  student ID: ").strip()
+print(f"Registered student ID: '{student_id}'")
 
 # ------------------------------------------------------------------------------
 # Part 5: Float Comparison Pitfall & math.isclose()
@@ -82,6 +94,9 @@ from decimal import Decimal  # noqa: F401
 # ------------------------------------------------------------------------------
 # TODO: Write Part 5 together in class below:
 
+float_sum = 0.1 + 0.2
+print(bool(float_sum == 0.3))
+print(bool(math.isclose(float_sum, 0.3) ))
 
 # ------------------------------------------------------------------------------
 # Part 6: Exact Financial Arithmetic with Decimal
@@ -93,6 +108,8 @@ from decimal import Decimal  # noqa: F401
 # ------------------------------------------------------------------------------
 # TODO: Write Part 6 together in class below:
 
+exact_sum = Decimal("0.1") + Decimal("0.2")
+print("Exact decimal sum:", exact_sum)
 
 # ------------------------------------------------------------------------------
 # Part 7: Multiple Assignment & Variable Swapping
@@ -104,6 +121,7 @@ from decimal import Decimal  # noqa: F401
 # 3. Print the swapped values: print(f"Swapped: a={a}, b={b}")
 # ------------------------------------------------------------------------------
 # TODO: Write Part 7 together in class below:
+
 
 
 # ------------------------------------------------------------------------------

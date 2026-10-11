@@ -29,6 +29,14 @@ import math  # noqa: F401
 # ------------------------------------------------------------------------------
 # TODO: Write your code for Challenge 1 below:
 
+eur_amount_str = input("EUR amount: ")
+eur_amount = float(eur_amount_str)
+
+exchange_rate = 1.24
+
+usd_amount = exchange_rate * eur_amount
+
+print(f"{usd_amount:.3f}") #f"{...:.3f}" to 3 show 3 decimals
 
 # ------------------------------------------------------------------------------
 # Challenge 2: Pizza Party Slices & Leftovers
@@ -52,6 +60,18 @@ import math  # noqa: F401
 # ------------------------------------------------------------------------------
 # TODO: Write your code for Challenge 2 below:
 
+student_amount = int(input("Enter number of students: "))
+pizza_amount = int(input("Enter number of pizzas: "))
+slices_perpizza = int(input("Enter slices per pizza: "))
+
+total_slices = pizza_amount * slices_perpizza
+slices_perstudent = total_slices // student_amount
+leftover_slices = total_slices % student_amount
+
+print(f"Total slices: {total_slices}")
+print(f"Slices per student: {slices_perstudent}")
+print(f"Leftover pizza: {leftover_slices}")
+
 
 # ------------------------------------------------------------------------------
 # Challenge 3: Sphere Geometry (Volume & Surface Area)
@@ -69,6 +89,12 @@ import math  # noqa: F401
 # ------------------------------------------------------------------------------
 # TODO: Write your code for Challenge 3 below:
 
+sphere_radius = float(input("Enter sphere radius: "))
+sphere_volume = (4/3) * math.pi * sphere_radius ** 3  
+sphere_area = 4 * math.pi * sphere_radius ** 2
+
+print(f"Sphere Area: {sphere_area:.2f}")
+print(f"Sphere Volume: {sphere_volume:.2f}")
 
 # ------------------------------------------------------------------------------
 # Challenge 4: 3-Cup Shell Game (Cyclic Variable Rotation)
@@ -87,6 +113,13 @@ import math  # noqa: F401
 #    print(cup_a, cup_b, cup_c, sep=" -> ")
 # ------------------------------------------------------------------------------
 # TODO: Write your code for Challenge 4 below:
+
+cup_a = input("Enter item in Cup A: ").strip()
+cup_b = input("Enter item in Cup B: ").strip()
+cup_c = input("Enter item in Cup C: ").strip()
+
+cup_a, cup_b, cup_c = cup_c, cup_a, cup_b
+print(cup_a, cup_b, cup_c, sep=" -> ")
 
 
 # ------------------------------------------------------------------------------
@@ -113,5 +146,17 @@ import math  # noqa: F401
 #    print(border)
 # ------------------------------------------------------------------------------
 # TODO: Write your code for Challenge 5 below:
+
+name = input("Enter attendee name: ").strip().title()
+dept = input("Enter department: ").strip().upper()
+role = input("Enter role: ").strip().title()
+
+border = "#" * 32
+print(border)
+print(f"NAME: {name}")
+print(f"DEPARTMENT: {dept}")
+print(f"ROLE: {role}")
+print(f"NAME LENGTH: {len(name)}")
+print(border)
 
 
